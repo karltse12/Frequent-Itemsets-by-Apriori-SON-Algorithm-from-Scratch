@@ -37,3 +37,27 @@ For this exercise, you will need to rst study the Section 6.4 (up to 6.4.3) of 
 5) Use above function to find the frequent itemset for 7 datasets (T10I4D100K, T40I10D100K, chess, connect, mushroom, pumsb, pumsb_star) with sample size (1%/2%/5%/10%)
 
 6) Get the size of above frequent itemsets and compare
+
+# Implementation of SON algorithm
+
+1) Imported basic libraries random and numpy
+
+2) Define a global variable for threshold percentage, which determine whether the itemset is frequent or not. For example, if the threshold percentage I set is 1% (0.01), and the data size is 30000, that means when the itemset exist 300 times or more, than it will be classified as frequent
+
+3) Read lines for 7 datasets (T10I4D100K, T40I10D100K, chess, connect, mushroom, pumsb, pumsb_star), lines in each dataset will be stored in a list
+
+4) Write the function of the SON algorithm
+
+      i) The function contains 2 parameters – list of data and the number of chunk (I set 10 chunks)
+
+      ii) At the beginning, the function will divide the whole dataset in to certain number of chunks (let’s say 10).
+
+      iii) Calculate the chunk’s threshold by (whole_set_size * threshold_percent/ number of chunks) Calculate the whole data’s threshold by (whole_set_size * threshold_percent)
+
+      iv) 1st pass of SON algorithm: - Find local frequent doubleton by A-priori algorithm for each chunk (support > = chunk’s threshold) - Union all local frequent doubleton to form a list (candidate itemsets)
+
+      v) 2nd pass of SON algorithm: - count all the candidate itemsets (sum up all the support of that itemset from each chunk) - select those that have support>= whole data’s threshold as the frequent itemsets, in order to remove false positives
+
+5) Use above function to find the frequent itemset for 7 datasets (T10I4D100K, T40I10D100K, chess, connect, mushroom, pumsb, pumsb_star) with number of chunks = 10
+
+6) Get the size of above frequent itemsets and compare with those from the simple, randomized algorithm
