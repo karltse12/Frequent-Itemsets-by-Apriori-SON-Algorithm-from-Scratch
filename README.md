@@ -70,7 +70,7 @@ I compared the result in 2 perspectives – 1) Jaccard Similarity between list o
 
 I obtained total 5 lists of frequent itemset from each dataset. 4 of them from simple, random algorithm and 1 of them from SON algorithm.
 
-<B>1) Jaccard Similarity<B>
+<B>1) Jaccard Similarity</B>
 
 Below is the matrix to show the Jaccard similarity percentage(%) between list of frequent itemsets from simple, random algorithm and SON algorithm. If the number is 100, that means they are 100% equal, it the number close to zero, that means they have no mutual elements.
   
