@@ -61,3 +61,14 @@ For this exercise, you will need to rst study the Section 6.4 (up to 6.4.3) of 
 5) Use above function to find the frequent itemset for 7 datasets (T10I4D100K, T40I10D100K, chess, connect, mushroom, pumsb, pumsb_star) with number of chunks = 10
 
 6) Get the size of above frequent itemsets and compare with those from the simple, randomized algorithm
+
+# Comparison the above 2 algorithms
+
+Default: For all experiments, I set 1% as threshold, which means if the support of itemset is larger than or equal to 1% times the total number of rows of dataset, then the itemset will be classified as frequent.
+
+I compared the result in 2 perspectives – 1) Jaccard Similarity between list of frequent itemsets & the 2) number of frequent itemsets. The function for simple and random algorithm that I wrote can also list out all the association rules and calculate the confidence for each rule, but it seems there is no good method to compare it with other data, so I don’t list out in here.
+
+I obtained total 5 lists of frequent itemset from each dataset. 4 of them from simple, random algorithm and 1 of them from SON algorithm.
+
+<B>1) Jaccard Similarity<B>
+
