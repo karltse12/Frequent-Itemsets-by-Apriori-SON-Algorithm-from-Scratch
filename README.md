@@ -22,7 +22,7 @@ For this exercise, you will need to rst study the Section 6.4 (up to 6.4.3) of 
 
 4) Write the function of the simple, randomized algorithm with A-priori algorithm inside
   
-  i) The function contains 2 parameters – list of data and the sample size (1%/2%/5%/10%)
+     i) The function contains 2 parameters – list of data and the sample size (1%/2%/5%/10%)
   
   ii) At the beginning, the function will choose random sample from the whole dataset, say like if the whole dataset is 30000 rows and the sample size is 1%, then it will choose 300 rows randomly and form a new list (sample).
   
